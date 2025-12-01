@@ -38,7 +38,7 @@ RNS850-LAN-Setup/
 │   └── var/                  #    Configuration files (DHCP, DNS, network)
 │
 ├── tools/                    # 🔧 Development Tools  
-│   └── decoder/              #    DrGER encoding/decoding utilities
+│   └── decoder/              #    megusta1337 encoding/decoding utilities
 │
 ├── documentation/            # 📚 Technical Documentation
 ├── examples/                 # ⚠️  Broken/incomplete files (DO NOT USE)
@@ -68,18 +68,6 @@ RNS850-LAN-Setup/
 - **New RNS-850 script** - Need to test `copie_scr_RNS850.sh` on actual hardware
 - **CarPlay interference** - May still need to disconnect CarPlay box during testing
 - **Log output verification** - Confirm logs now get written with proper SD detection
-
-### ✅ **RESOLVED: Decoding Algorithm**
-- **Successfully decoded DrGER's copie_scr.sh** - Complete script with proper MMI detection logic
-- **Successfully decoded gps_copie_scr.sh** - Revealed RNS-850 specific SD detection method  
-- **Created hybrid script** - Works with both RNS-850 and MMI3G systems
-
-### 🔓 **Decoding Breakthrough: Found Working Tools**
-- **Located existing decoder algorithm** from another GitHub repository 
-- **Applied decoder to DrGER's scripts** - Successfully decoded PRNG-based XOR cipher with seed `0x001be3ac`
-- **Adapted decoder tools** in C for this project (see `tools/decoder/`)
-- **Can now modify DrGER scripts** and re-encode for hardware compatibility
-- **Documented process** for future development and adaptation
 
 ---
 
@@ -161,9 +149,6 @@ cd tools/decoder/
 
 ## 🎉 **BREAKTHROUGH: RNS-850 Compatibility Solved!**
 
-### 🔍 **Root Cause Identified and Fixed**
-By decoding the RNS-specific `gps_copie_scr.sh`, we discovered **RNS-850 uses completely different SD card mounting**:
-
 **MMI3G Method (Original):**
 - Assumes fixed SD path from parameter `$1`
 - Checks for specific MMI variant config files
@@ -175,7 +160,7 @@ By decoding the RNS-specific `gps_copie_scr.sh`, we discovered **RNS-850 uses co
 - Direct mount and execute approach
 
 ### ✅ **New RNS-850 Compatible Script Created**
-- **`script/copie_scr.sh`** - 🎯 **NOW RNS-850 COMPATIBLE!** Properly encoded hybrid script
+- **`script/copie_scr.sh`** - 🎯 **NOW RNS-850 COMPATIBLE! (Potentially) ** Properly encoded hybrid script
 - **`script/copie_scr_old.sh`** - Original DrGER MMI3G script (backup)
 - **`script/copie_scr_DECODED.sh`** - Readable version showing RNS-850 detection logic
 - **Automatic detection** - Tries RNS method first, falls back to MMI3G
@@ -215,14 +200,10 @@ By decoding the RNS-specific `gps_copie_scr.sh`, we discovered **RNS-850 uses co
 - **Audizine Forum** - Original DrGER discussions and updates
 
 ### Credits & References
-- **DrGER** - Original MMI3G LAN scripts and encoding algorithm
+- **DrGER** - Original MMI3G LAN scripts and source of most information regarding this
 - **megusta1337** - C implementation of decoder on GitHub  
-- **Audizine Community** - Testing, documentation, and support
+- **Audizine VWVortex ClubTouareg Community** - Testing, documentation, and support for past scripts that I used as reference for this so far
 - **daredoole** - RNS-850 adaptation and reverse engineering
-**Source Repositories:**
-- **DrGER's Original:** https://github.com/DrGER2/MMI3GP-LAN-Setup
-- **RNS-850 Reference:** https://github.com/hbsagen/RNS850_gps_logger
-- **Copie_scr_Decoder:** https://github.com/megusta1337/Copie_scr_Decoder
 ---
 
 ## 💬 Support
