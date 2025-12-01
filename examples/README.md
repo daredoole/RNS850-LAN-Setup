@@ -1,24 +1,33 @@
-# Example Files
+# Examples Directory
 
-This directory contains example decoded copie_scr.sh files for reference.
+⚠️ **Note: This directory currently contains broken/incomplete files and is not recommended for use.**
 
-## Files
+## Current Status
 
-- **`copie_scr_decoded_example.sh`** - Advanced decoded copie_scr.sh script with multiple features
-  - Includes MMI3G/MMI3GP detection
-  - Has version tracking comments from DrGER
-  - More sophisticated than the simple launcher script
+The example files in this repository appear to be corrupted or incomplete. The decoded scripts end abruptly with incomplete shell syntax:
 
-## Comparison with Main Script
+```bash
+if [ -e /etc/pci-3g_9304.cfg
+```
 
-- **Root `copie_scr_DECODED.sh`** - Simple launcher script (269 bytes)
-- **This example** - Advanced script with additional features (311 bytes)
+This line is missing:
+- Closing bracket `]`  
+- `then` keyword
+- Actual conditional logic
+- Closing `fi` statement
 
-Both are valid copie_scr.sh implementations, but serve different purposes:
+## Recommendation
 
-- **Simple version**: Basic launcher for MMI3G systems
-- **Advanced version**: Enhanced with version detection and additional environment variables
+**For RNS-850 use, always use the files in the `script/` directory**, which contain:
+- ✅ Complete, working shell scripts
+- ✅ Properly tested for RNS-850 platform
+- ✅ Valid syntax that will execute without errors
 
-## Usage
+## Purpose of This Directory
 
-These are examples only. For actual RNS-850 use, stick with the files in the root directory which have been specifically configured for the RNS-850 platform.
+This directory is kept for historical reference and reverse engineering documentation, but should not be used for actual deployment.
+
+## Working Files Location
+
+All working, tested files are located in:
+- **`../script/`** - Complete RNS-850 setup scripts (ready to copy to SD card)
