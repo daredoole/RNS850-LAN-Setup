@@ -81,17 +81,17 @@ NetworkingService_0_ap.mountparam = irq=13,dma=0x104,fwpath=/lib/dll,clock=25M,r
 #if connected to SD1 
 #NetworkingService_0_ap.mountparam = irq=13,dma=0x105,smem=0xc0440000,fwpath=/lib/dll,clock=25M
 
-# IP
-NetworkingService_uap0.ipaddress = 192.168.1.1
+ # IP
+NetworkingService_uap0.ipaddress = 192.168.2.1
 NetworkingService_uap0.ipnetmask = 255.255.255.0
 NetworkingService_uap0.ipmode = static
-NetworkingService_uap0.dhcpsrange = 192.168.1.100, 192.168.1.110
+NetworkingService_uap0.dhcpsrange = 192.168.2.100, 192.168.2.110
 NetworkingService.statisticsinterval = 2000
 
 # dhcpd
 NetworkingService.dhcpdlease = /mnt/phonedb
 NetworkingService.dhcpdconf = /mnt/phonedb
-NetworkingService.dnsservers = 192.168.0.1, 8.8.8.8
+NetworkingService.dnsservers = 192.168.2.1, 8.8.8.8
 NetworkingService.dhcpsmaxleasetime = 48000
 NetworkingService.dhcpsdefaultleasetime = 36000
 

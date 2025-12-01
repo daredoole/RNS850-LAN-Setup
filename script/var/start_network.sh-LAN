@@ -14,11 +14,11 @@
 # ----------------------------------------------------------------------
 
 # 20230216 drger; Static IP on wired interface en5
-IPADDR=192.168.0.2
+IPADDR=192.168.2.2
 NETMASK=255.255.255.0
-BRDCAST=192.168.0.255
-GATEWAY=192.168.0.1
-DNS1=192.168.0.1
+BRDCAST=192.168.2.255
+GATEWAY=192.168.2.1
+DNS1=192.168.2.1
 DNS2=8.8.4.4
 if [ ! -f /HBpersistence/usedhcp ]; then
   /sbin/ifconfig en5 inet $IPADDR netmask $NETMASK broadcast $BRDCAST
