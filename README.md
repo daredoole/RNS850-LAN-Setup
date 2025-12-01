@@ -1,6 +1,5 @@
-# RNS-850 LAN Setup (Modified)
-
-This repository contains a modified version of the LAN setup scripts, specifically tailored for the RNS-850 platform. 
+# RNS-850 LAN Setup
+This repository contains a modified version of the MMI3G LAN setup scripts by DrGer, specifically tailored for the RNS-850 platform. 
 
 ## Purpose
 - This version is **not compatible** with MMI3G or other hardware.
