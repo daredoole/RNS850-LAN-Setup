@@ -1,6 +1,6 @@
 # RNS-850 LAN Setup
 
-Modified MMI3G LAN setup scripts by DrGer, specifically tailored for the RNS-850 platform.
+Modified MMI3G LAN setup scripts by DrGer, specifically tailored for the RNS-850 platform covering 2011 - 2017 Volkswagen Touareg
 
 ## 📚 Source Attribution
 
